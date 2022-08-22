@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                    var posts = response.body()
                    Toast.makeText(baseContext, "${posts!!.size} posts", Toast.
                    LENGTH_LONG).show()
-                   var adapter=PostRvAdapter(baseContext,posts)
+                   var adapter=PostRvAdapter(posts)
                    Log.d("Tag",fetchPost().toString())
                    binding.rvretrofit.adapter=adapter
                    binding.rvretrofit.layoutManager=LinearLayoutManager(baseContext)
